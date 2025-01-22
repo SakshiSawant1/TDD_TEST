@@ -11,3 +11,18 @@ def test_custom_delimiter():
     calc = StringCalculator()
     assert calc.add("//;\n1;2") == 3
     assert calc.add("//*\n1*2*3")==6
+    
+#for a single number
+def test_single_number():
+    calc = StringCalculator()
+    assert calc.add("1") == 1
+
+# for two numbers.
+def test_two_numbers():
+    calc = StringCalculator()
+    assert calc.add("1,5") == 6
+
+#for multiple numbers.
+def test_multiple_numbers():
+    calc = StringCalculator()
+    assert calc.add("1,2,3,4,5") == 15
